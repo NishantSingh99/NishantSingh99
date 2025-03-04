@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.to Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Dev.to Logo">
+            </div>
+
+            <!-- ✅ Burger Menu Checkbox (Hidden) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search...">
+                <span class="algolia-text">Powered by Algolia</span>
+            </div>                                                
+            <nav>
+                <a href="#">Login</a>
+                <a href="#" class="btn-create-account">Create Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar-left">
+            <h3>DEV Community is a community of 2,873,475 amazing developers</h3>
+            <p>We're a place where coders share, stay up-to-date and grow their careers</p><br>
+            <button class="bttn-create-account">Create account</button><br><br><br>
+            <div class="login-link">
+                <a href="#">Log in</a><br><br>
+            </div>
+        </aside>
+    
+        <!-- ✅ Sidebar Left Down (Scrollable) -->
+        <aside class="sidebar-leftdown">
+            <ul>
+                <li><a href="#">🏠 Home</a></li>
+                <li><a href="#">🚀 DEV++</a></li>
+                <li><a href="#">🎙️ Podcasts</a></li>
+                <li><a href="#">📹 Videos</a></li>
+                <li><a href="#">🏷️ Tags</a></li>
+                <li><a href="#">❓ DEV Help</a></li>
+                <li><a href="#">🛍️ Forem Shop</a></li>
+                <li><a href="#">📢 Advertise on DEV</a></li>
+                <li><a href="#">🏆 DEV Challenges</a></li>
+                <li><a href="#">🎭 DEV Showcase</a></li>
+                <li><a href="#"> ℹ️ About</a></li>
+                <li><a href="#">📞 Contact</a></li>
+                <li><a href="#">💾 Free Postgres Database</a></li>
+                <li><a href="#">💻 Software comparisons</a></li>
+                <li><a href="#"><strong>Other</strong></a></li>
+                <li><a href="#">📜 Code of Conduct</a></li>
+                <li><a href="#">🔒 Privacy Policy</a></li>
+                <li><a href="#">⚖️ Terms of Use</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+            
+        <main class="posts">
+            <section>
+                <div class="top-container">
+                    <h3>Relevant</h3>
+                    <h4>Latest</h4>
+                    <h4>Top</h4>
+                </div>                              
+                
+                <article>
+                    <img src="images/backcov.jpg" alt="Featured Post">
+                    <h2>11+ Best Websites to Download Free Next.js Template</h2>
+                    <p>#webdev #nextjs #tailwindcss #opensource</p>
+                </article><br>
+                
+                <article>
+                    <div class="post-header">
+                        <img src="images/profilepic.jpg" alt="User Profile" class="profile-pic">
+                        <div class="user-info">
+                            <h4>Ben Halpern</h4>
+                            <p>Feb 24</p>
+                            <h2>Announcing the Pub/Sub Compute app</h2>
+                        </div>
+                    </div>
+                
+                    <!-- ✅ Move post-footer to the bottom of the article -->
+                    <div class="post-footer">
+                        <div class="reactions">
+                            <span>❤️🔥👏🎉🤩 9 reactions</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i> 1 comment
+                            </div>
+                            <div class="read-time">
+                                <i class="fa-regular fa-clock"></i> 6 min read
+                            </div>
+                            <div class="save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article><br>
+
+                <article>
+                    <div class="posts-header">
+                        <h5>DEV Community</h5>
+                        <h3>Are you a developer seeking to learn, grow, and connect with like-minded professionals in the tech industry?</h3>
+                    </div>
+                </article><br>
+
+                <article>
+                    <div class="post-header">
+                        <img src="images/funcartn.jpg" alt="User Profile" class="profile-pic">
+                        <div class="user-info">
+                            <h4>Andy Haskell</h4>
+                            <p>Feb 27</p>
+                            <h2>Conferencing tips as an autistic + ADHD conference</h2>
+                            <h7>#neurodiversity #codenewbie #career #devrel</h7>
+                        </div>
+                    </div>
+                
+                    <!-- ✅ Move post-footer to the bottom of the article -->
+                    <div class="post-footer">
+                        <div class="reactions">
+                            <span>🎉🤩❤️🔥👏 5 reactions</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i> 2 comment
+                            </div>
+                            <div class="read-time">
+                                <i class="fa-regular fa-clock"></i> 11 min read
+                            </div>
+                            <div class="save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article><br>
+
+                <article>
+                    <div class="post-header">
+                        <img src="images/picboy.jpg" alt="User Profile" class="profile-pic">
+                        <div class="user-info">
+                            <h4>Ingo Steinke, web developer</h4>
+                            <p>Feb 25</p>
+                            <h2>Rely less on Third-Party Services</h2>
+                            <h7>#watercooler</h7>
+                        </div>
+                    </div>
+                
+                    <!-- ✅ Move post-footer to the bottom of the article -->
+                    <div class="post-footer">
+                        <div class="reactions">
+                            <span>🔥👏🎉❤️🤩 19 reactions</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i> 20 comment
+                            </div>
+                            <div class="read-time">
+                                <i class="fa-regular fa-clock"></i> 15 min read
+                            </div>
+                            <div class="save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article><br>
+
+                <article>
+                    <div class="post-header">
+                        <img src="images/postpic.jpg" alt="User Profile" class="profile-pic">
+                        <div class="user-info">
+                            <h4>Mahdi Jazini</h4>
+                            <p>Feb 22</p>
+                            <h2>SSG vs SSR in Next.js 15!</h2>
+                            <h7>#nextjs #webdev #programming #frontend</h7>
+                        </div>
+                    </div>
+                
+                    <!-- ✅ Move post-footer to the bottom of the article -->
+                    <div class="post-footer">
+                        <div class="reactions">
+                            <span>🎉🤩❤️🔥👏 17 reactions</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i> 5 comment
+                            </div>
+                            <div class="read-time">
+                                <i class="fa-regular fa-clock"></i> 20 min read
+                            </div>
+                            <div class="save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article><br>
+
+                <article>
+                    <div class="post-header">
+                        <img src="images/picmen.jpg" alt="User Profile" class="profile-pic">
+                        <div class="user-info">
+                            <h4>Jenuel Oras Ganawed</h4>
+                            <p>Feb 20</p>
+                            <h2>Laravel Cloud to Save the Day: A Game-Changer.</h2>
+                                <h7>#laravel #php #webdev #programming</h7>
+                        </div>
+                    </div>
+                
+                    <!-- ✅ Move post-footer to the bottom of the article -->
+                    <div class="post-footer">
+                        <div class="reactions">
+                            <span>❤️🔥👏🎉🤩 10 reactions</span>
+                        </div>
+                        <div class="post-actions">
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i>  comment
+                            </div>
+                            <div class="read-time">
+                                <i class="fa-regular fa-clock"></i> 32 min read
+                            </div>
+                            <div class="save">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </article><br>
+            </section>
+        </main>
+
+        <aside class="sidebar-right">
+            <h4>👋 What's happening this week</h4>
+            <div class="product-feature">
+                <h4>Product Feature 🌟</h4>
+                <h5>Just Launched</h5>
+                <div class="product-feature-content">
+                    <img src="images/rightimg.jpg" alt="Featured Post">
+                    <h3>Expanding pgai Vectorizer: SQLAlchemy and LiteLLM Makes Vector Search Simple</h3>
+                    <p>SQLAlchemy makes vector storage simple. LiteLLM lets you choose the best model. pgai Vectorizer keeps it all in PostgreSQL.</p>
+                </div>
+            </div>
+            <div class="challenges">
+                <h4>Frontend Challenge: February Edition</h4>
+                <p>Submissions due February 23</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dev.to Clone. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

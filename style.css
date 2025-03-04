@@ -1,0 +1,527 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo img {
+    height: 40px;
+    margin-left: -100px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 670px;
+    max-width: 670px;
+    margin-left: -30px;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    background: transparent;
+    padding-left: 35px; /* Space for search icon */
+    padding-right: 120px; /* Space for Algolia text */
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* Moves icon to the left side */
+    color: gray;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.algolia-text {
+    position: absolute;
+    right: 10px; /* Moves text inside the search bar */
+    font-size: 12px;
+    color: gray;
+    white-space: nowrap;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.btn-create-account {
+    background-color: white;  /* White background */
+    color: rgb(100, 100, 249);              /* Blue text */
+    padding: 9px 14px;
+    border: 1px solid blue;   /* Blue border */
+    border-radius: 5px;
+    cursor: pointer;          /* Pointer cursor for better UX */
+    transition: all 0.3s ease; /* Smooth transition */
+    font-weight: bold;
+    margin-right: -10px;
+}
+
+.btn-create-account:hover {
+    background-color: #3e3ea5;  /* Blue background on hover */
+    color: white;            /* White text on hover */
+    text-decoration: underline;
+}
+
+.bttn-create-account {
+    background-color: white;  /* White background */
+    color: rgb(100, 100, 249);              /* Blue text */
+    padding: 11px 50px;
+    border: 1px solid blue;   /* Blue border */
+    border-radius: 6px;
+    cursor: pointer;          /* Pointer cursor for better UX */
+    transition: all 0.3s ease; /* Smooth transition */
+    left: 97px;
+    position: fixed;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0px; /* Moves button down */
+}
+
+.bttn-create-account:hover {
+    background-color: #3e3ea5;  /* Blue background on hover */
+    color: white;            /* White text on hover */
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 90px;
+}
+
+.sidebar-left, .sidebar-right, .sidedownbar-right {
+    width: 20%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Sidebar Left - Fixed Section */
+.sidebar-left {
+    width: 14%;
+    position: fixed;
+    left: 78px;
+    top: 75px;
+    height: auto; /* Adjusted height */
+}
+
+/* ✅ Sidebar Left Down - Scrollable Section */
+.sidebar-leftdown {
+    width: 15%;
+    position: fixed;
+    left: 77px;
+    top: 390px; /* Position below the main sidebar */
+    max-height: calc(100vh - 300px);
+    overflow-y: auto; /* Enables scrolling */
+    background: transparent;
+    padding: 10px;
+}
+
+/* Hide scrollbar for better UI */
+.sidebar-leftdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-leftdown::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+}
+
+/* ✅ Sidebar Navigation Styling */
+.sidebar-leftdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-leftdown ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-leftdown ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between icon and text */
+}
+
+.sidebar-leftdown ul li a:hover {
+    color: #3e3ea5; /* Hover effect */
+}
+
+.sidebar-top {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Adds spacing between top and nav */
+}
+
+.login-link {
+    text-align: right;  /* Moves "Log in" to the right */
+    margin-right: 90px; /* Adjust spacing */
+}
+
+.login-link a {
+    display: inline-block; /* Helps prevent forced underlining */
+    text-decoration: none !important;
+}
+
+.sidebar-right {
+    width: 22%;
+    position: fixed;
+    right: 70px;
+    top: 75px;
+}
+
+.sidedownbar-right {
+    width: 22%;
+    position: fixed;
+    right: 70px;
+    top: 275px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidedownbar-right {
+    width: 22%;
+    position: fixed;
+    right: 70px;
+    top: 675px;
+}
+
+.posts {
+    width: 60%;
+    margin-left: 65px;
+    margin-top: 60px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 8px; */
+    gap: 5px; /* Add space between elements */
+}
+
+.profile-pic {
+    width: 40px;  /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fits properly */
+     display: inline-block;
+    margin-left: 2%;
+    margin-top: -50px; 
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Ensures name and date stay aligned */
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+/* Ensure article structure follows the correct flow */
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between posts */
+}
+
+/* Push footer to the bottom */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #666;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Make sure post content does not interfere */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-info h4, .user-info p {
+    margin: 0;
+}
+
+/* Reactions and Actions */
+.reactions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.post-actions i {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-actions i:hover {
+    color: #0073ff;
+}
+
+.top-container {
+    display: flex;  /* Arrange items in a row */
+    align-items: center;  /* Align items vertically */
+    gap: 1px;  /* Add space between elements */
+    padding-left: 20px;
+}
+
+.top-container h4:nth-child(2),
+.top-container h4:nth-child(3) {
+    font-weight: normal;  /* Makes "Latest" and "Top" lighter */
+}
+
+.top-container h4 {
+    color: black;  /* Default text color */
+    padding: 1px 12px;
+    font-weight: bold;
+    cursor: pointer;  /* Pointer cursor for better UX */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.top-container h4:hover {
+    color: blue;  /* Text color turns blue on hover */
+}
+
+
+article {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: -15px;
+    max-width: 700px; /* Set a fixed maximum width */
+    width: 100%; /* Ensures it adapts to smaller screens */
+    margin: 0 auto; /* Centers the article */
+    
+}
+
+article img {
+    width: 104%; /* Increase image size */
+    max-height: 350px; /* Adjust height */
+    object-fit: cover; /* Ensures full coverage */
+    border-radius: 10px; /* Keeps curved edges */
+    display: block; /* Removes unwanted gaps */
+    position: relative; /* Allows movement */
+    left: -13px; /* Moves image left */
+    top: -12px; /* Moves image up */
+}
+
+.product-feature-content img {
+    width: 100%; 
+    max-width: 300px;  
+    height: auto;  
+    border-radius: 5px;  
+    height: 150px;
+}
+
+
+/* 🌍 Default styles already exist in your CSS */
+
+/* 📌 Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack sidebars and posts vertically */
+        align-items: center;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        display: none; /* Hide sidebars */
+    }
+
+    .posts {
+        width: 90%; /* Expand posts */
+        margin-left: -14px;
+    }
+}
+
+/* 📱 Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    body {
+        align-items: stretch; /* Use full width */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        left: 30px;
+    }
+
+    nav {
+        display: none; /* Hide desktop nav */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button */
+    }
+
+    .posts {
+        width: 100%;
+        padding: 10px;
+        margin-top: 75px;
+    }
+
+    .post-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ✅ Default Navigation - Show on Desktop */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* ✅ Hide the Burger Menu Checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* ✅ Burger Menu Icon - Hidden on Desktop */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 📱 Mobile View - Show Burger Menu */
+@media (max-width: 768px) {
+    /* ✅ Hide desktop menu by default */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* ✅ Show Burger Menu Icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* ✅ Show the menu only when burger is clicked */
+    .menu-checkbox:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+}
