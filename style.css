@@ -1,0 +1,194 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e7dff, #5c3ab2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: auto; /* Ensure scrolling on the body level */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: #2c2c54;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+    color: #f4f4f4;
+    max-height: 100vh; /* Ensure container's height is 100% of the viewport */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    flex: 1;
+}
+
+/* Header Animation */
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: moveLeftToRight 6s ease-in-out infinite, colorChange 6s linear infinite;
+}
+
+/* Header Keyframes */
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: #ffcc00;
+    }
+    25% {
+        color: #00bfff;
+    }
+    50% {
+        color: #ff6347;
+    }
+    75% {
+        color: #32cd32;
+    }
+}
+
+section {
+    padding: 30px;
+    background-color: #3e3e8c;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-height: 500px;
+    overflow-y: auto; /* Allow scrolling within section */
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #f4f4f4;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+#weather-info {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.news-item, .headline-item {
+    background-color: #4e4e9d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #f4f4f4;
+}
+
+.news-item h3, .headline-item h3 {
+    font-size: 1.6em;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.news-item p, .headline-item p {
+    color: #bbb;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ff6f00;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1em;
+    color: #bbb;
+    letter-spacing: 0.5px;
+}
+
+/* Adding fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .news-item, .headline-item {
+        padding: 15px;
+    }
+}
