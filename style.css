@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     padding: 20px;
-    overflow: auto; /* Ensure scrolling on the body level */
+    overflow: auto; 
 }
 
 .container {
@@ -29,12 +29,11 @@ body {
     gap: 30px;
     animation: fadeIn 2s ease-in-out;
     color: #f4f4f4;
-    max-height: 100vh; /* Ensure container's height is 100% of the viewport */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    max-height: 100vh;
+    overflow-y: auto; 
     flex: 1;
 }
 
-/* Header Animation */
 h1 {
     font-size: 3em;
     text-align: center;
@@ -79,7 +78,7 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     max-height: 500px;
-    overflow-y: auto; /* Allow scrolling within section */
+    overflow-y: auto; 
 }
 
 section:hover {
